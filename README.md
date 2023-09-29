@@ -1,0 +1,4 @@
+In the interest of both brevity and simplicity, I decided to use an ExpandableListView with SimpleExpandableListAdapter to display the results of the fetch operation.  Ideally, I would write a complete implementation for a JsonExpandableListAdapter which would bind the data in the JSONArray more directly.  Using SimpleExpandableListAdapter was sufficient for this exercise and I chose not to overcomplicate it.  However, it does mean that some extra processing will need to be done on all data items in the sample set because they will need to be read into a JSONArray via constructor, then copied into two separate List structures to be then sorted and finally displayed.  The chosen approach is admittedly somewhat wasteful in terms of space and complexity.
+
+I've included SLF4J logging facade with Logback for Android for a logging framework.  org.json was chosen arbitrary, but could be replaced with Moshi, GSON or any other modern JSON parser.
+
